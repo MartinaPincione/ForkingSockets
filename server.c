@@ -10,33 +10,6 @@
 #include <fcntl.h>
 #include <sys/wait.h>
 
-/*
-    * sockets are bidirectional
-    * read and write are essentially the same
-    
-    * TCP sends a connect request to ensure that the other device is ready for communication
-    * connect goes from client to server
-
-    * By default, sockets are blocking --> particularly the accept call
-    SOLUTION1
-    * get around this by making a parent and child process
-    * communication with client takes place in the child process
-    * create a child for every client that wishes to communicate
-    * parent waits for incoming connections in the future
-    SOLUTION2
-    * create sockets as nonblocking right after making the sid!!! 
-    * fcntl API makes socket nonblocking by editing the flags after creating the socket
-    * this is part of the starter code ?? prof said??
-    MONITOR ACTIVITY ON MULT. SOCKETS AT THE SAME TIME
-    * select API
-
-    * sending first the size of the message you are going to send 
-    * make a buffer of that size
-    * then do a loop to recieve the buffer
-    
-    * implement a nonblocking code --> week 7 lecture 1
-
-*/
 
 void checkError(int status)
 {
