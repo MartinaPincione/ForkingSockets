@@ -93,7 +93,7 @@ void childProcess(int chatSocket)
     printf("Server read [%s] from the client.\n", buf);
     free(buf);
 
-    char* message = "Hello Shorty!";
+    char* message = "Hello Client!";
     printf("Server wrote [%s] to the client.\n", message);
     int mesSize = strlen(message) + 1;
     int wc = write(chatSocket, &mesSize, sizeof(mesSize));
