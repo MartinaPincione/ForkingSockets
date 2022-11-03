@@ -29,7 +29,7 @@ int main(int argc, char* argv[])
     int sid = createClient(9000, "localhost");
 
     //client sending to server 
-    char* buf = "Hey Baddie!";
+    char* buf = "Hey Server!";
     int bufSize = strlen(buf) + 1, sent = 0;
     int rem = bufSize;
     int wc = write(sid, &bufSize, sizeof(bufSize)); //sending the size of the buffer it will send
